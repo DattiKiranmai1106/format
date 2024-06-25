@@ -1,0 +1,50 @@
+<mvc:View controllerName="com.sap.kt.form.formate.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showHeader="false">
+        <content >
+                <Toolbar id="TB1" class="TBClass1">
+			        <Title text="Expense Table" class="tit1" />
+                    <Button text="Go To View2" press="onPressNavView"/>
+                    <Button text="Add Expense" press="onPress" class="butclsTable" />
+                </Toolbar>
+                <Table id="idStudentTable"  alternateRowColors="false" items="{path:'expenseData>/'}" mode="Delete" delete="onPressDelete"  >
+		            <columns >
+			            <Column  >
+			            	<Text text="Expense ID" />
+			            </Column>
+			            <Column>
+			            	<Text text="Expense Name" />
+			            </Column>
+			            <Column>
+			            	<Text text="Expense Amount(INR)" />
+			            </Column>
+			            <Column >
+			            	<Text text="Expense Amount(USD)" />
+			            </Column>
+			            <Column>
+			            	<Text text="Expense Amount(EVR)" />
+			            </Column>
+			            <Column>
+			            	<Text text="Status" />
+			            </Column>
+		            </columns>
+                    <items>
+                        <ColumnListItem id="colId"  class="cell" type="Navigation" press="onPressNavView"  >
+                            <cells class="fun">
+                               <Text text="{expenseData>expenseId}"  />
+                               <Text text="{expenseData>expenseName}"  />
+                               <Input value="{ path:'expenseData>expenseAmount1', formatter:'.formatt.formatCurrencyText'}"  />
+                               <Input value="{ path:'expenseData>expenseAmount1', formatter:'.formatt.formatCurrencyInUSDText'}"  />
+                               <Input value="{ path:'expenseData>expenseAmount1', formatter:'.formatt.formatCurrencyInEuroText'}"  />
+                               <ObjectStatus text="{expenseData>expenseStatus}" state="{
+                                path:'expenseData>expenseStatus',
+                                formatter:'.formatt.formatDataOblject'
+                               }" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                  </Table> 
+        </content>
+    </Page>
+</mvc:View>

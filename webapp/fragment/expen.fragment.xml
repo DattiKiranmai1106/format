@@ -1,0 +1,40 @@
+<core:FragmentDefinition
+	xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+>
+	<Dialog
+		title="ADD EXPENSES">
+    <f:SimpleForm
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"                       
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Expense ID" />
+				<Input id="idExpense" value=""  />
+				<Label text="Expense Name" />
+				<Input id="idExpensName"  value=" "/>
+				<Label text="Expense Amount(INR)" />
+				<Input id="idExpenAmount"  value="" />
+                <Label text="Status" />
+				<Input id="idExpenStatus"   value=""  />
+                <!-- <Label text="{i18n>title24}" />
+				<Input id="idPer"  value="{oValidationModel>/Percentage}" /> --> 
+			</f:content>
+		</f:SimpleForm>
+        <Button class="butt1" text="Save" press="onPressSave"  />
+        <Button class="butt2" text="Close" press="onPressClose"/>
+	</Dialog>
+</core:FragmentDefinition>

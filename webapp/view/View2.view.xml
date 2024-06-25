@@ -1,0 +1,45 @@
+<mvc:View controllerName="com.sap.kt.form.formate.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" 	xmlns:f="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="onPressNavgateView1" >
+        <content >
+          <!-- <Button press="onPressNavgateView1" text="View2" /> -->
+        	<f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="FORM DETAILS"/>
+					<ToolbarSpacer />
+				</Toolbar>
+			</f:toolbar>
+			<f:content>
+				<Label text="Expense ID" />
+				<Text text=""/>
+				<Label text=" Expense Name" />
+				<Text text=""/>
+                <Label text="Expense Amount(INR)" />
+				<Text text=""/>
+                <Label text="Expense Amount(USD)" />
+				<Text text=""/>
+                <Label text="Expense Amount(EUR)" />
+				<Text text=""/>
+			</f:content>
+		</f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>
